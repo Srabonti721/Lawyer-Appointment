@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar/Navbar';
+import { Link } from 'react-router';
 
 const ErrorPage = () => {
     return (
@@ -9,7 +10,7 @@ const ErrorPage = () => {
             <div className='text-center space-y-2'>
                 <h2 className='text-red-500 font-bold text-3xl'>404 - Page Not Found</h2>
                 <p className='font-semibold'>Oops! the page you're looking for doesn't exist</p>
-                <button className='btn text-white bg-[#0EA106]'>Go Back Home</button>
+                <Link to={'/'} className='btn text-white bg-[#0EA106]'>Go Back Home</Link>
             </div>
         </div>
     );

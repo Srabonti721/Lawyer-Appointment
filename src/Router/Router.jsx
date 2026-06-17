@@ -2,8 +2,8 @@ import { createBrowserRouter } from "react-router";
 import Root from "../components/Root";
 import Home from "../components/Home";
 import ErrorPage from "../pages/ErrorPage";
-import Blogs from "./Blogs/Blogs";
-import Booking from "./MyBooking/Booking";
+import Blogs from "../pages/Blogs/Blogs";
+import Booking from "../pages/MyBooking/Booking";
 export const router = createBrowserRouter([
     {
         path: "/",
