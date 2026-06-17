@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Lawyer from './Lawyer';
 
 const Lawyers = ({ data }) => {
+  const [cards, setCards] = useState(6);
+  const lawyerData = data.slice(0,cards)
+      const handleShowAllLawyers = () =>{
+      setCards(12);
+    }
+  
+  
   return (
     <div>
       <div className='text-center my-4'>
@@ -10,11 +17,11 @@ const Lawyers = ({ data }) => {
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4 my-4'>
         {
-          data.map(lawyer => <Lawyer key={lawyer.id} lawyer={lawyer}></Lawyer>)
+          lawyerData.map(lawyer => <Lawyer key={lawyer.id} lawyer={lawyer}></Lawyer>)
         }
       </div>
       <div className=' text-center my-4 '>
-        <button className='btn rounded-full text-white bg-[#0EA106]'>Show All Lawyers</button>
+        <button onClick={handleShowAllLawyers} className='btn rounded-full text-white bg-[#0EA106]'>Show All Lawyers</button>
       </div>
 
     </div>
