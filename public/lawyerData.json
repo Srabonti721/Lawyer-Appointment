@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co.com/ds9MdCYM/lawyer3.jpg",
+    "name": "Michael Anderson",
+    "speciality": "Criminal Lawyer",
+    "experience": "12 Years",
+    "licenseNumber": "LIC-10234",
+    "consultationFee": 1500,
+    "availability": ["Sunday", "Tuesday", "Thursday"],
+     "available": "Available"
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co.com/DgT1s4Jh/lawyer5.jpg",
+    "name": "Sophia Carter",
+    "speciality": "Family Lawyer",
+    "experience": "8 Years",
+    "licenseNumber": "LIC-20456",
+    "consultationFee": 2000,
+    "availability": ["Monday", "Wednesday", "Friday"],
+     "available": "Available"
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co.com/PGd502BJ/lawyer4.jpg",
+    "name": "Daniel Thompson",
+    "speciality": "Corporate Lawyer",
+    "experience": "15 Years",
+    "licenseNumber": "LIC-30789",
+    "consultationFee": 1200,
+    "availability": ["Saturday", "Sunday", "Tuesday"],
+     "available": " Not Available"
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co.com/FLH2WQFz/lawyer1.jpg",
+    "name": "Emily Johnson",
+    "speciality": "Immigration Lawyer",
+    "experience": "10 Years",
+    "licenseNumber": "LIC-41267",
+    "consultationFee": 1800,
+    "availability": ["Monday", "Thursday", "Saturday"],
+     "available": "Available"
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co.com/PZBmkRKR/lawyer.jpg",
+    "name": "James Wilson",
+    "speciality": "Property Lawyer",
+    "experience": "7 Years",
+    "licenseNumber": "LIC-52891",
+    "consultationFee": 2500,
+    "availability": ["Wednesday", "Friday", "Sunday"],
+     "available": "Not Available"
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co.com/S7w6S8kN/tayla.jpg",
+    "name": "Olivia Martinez",
+    "speciality": "Civil Lawyer",
+    "experience": "14 Years",
+    "licenseNumber": "LIC-63452",
+    "consultationFee": 1000,
+    "availability": ["Tuesday", "Thursday", "Saturday"],
+     "available": "Available"
+  },
+  {
+    "id": 7,
+    "image": "https://i.ibb.co.com/V0bB9npf/student.jpg",
+    "name": "William Brown",
+    "speciality": "Tax Lawyer",
+    "experience": "11 Years",
+    "licenseNumber": "LIC-74823",
+    "consultationFee": 2200,
+    "availability": ["Monday", "Tuesday", "Friday"],
+     "available": " Not Available"
+  },
+  {
+    "id": 8,
+    "image": "https://i.ibb.co.com/9384jCGZ/simon.jpg",
+    "name": "Emma Davis",
+    "speciality": "Divorce Lawyer",
+    "experience": "9 Years",
+    "licenseNumber": "LIC-85214",
+    "consultationFee": 1700,
+    "availability": ["Sunday", "Wednesday", "Thursday"],
+     "available": "Available"
+  },
+  {
+    "id": 9,
+    "image": "https://i.ibb.co.com/DSSTkSw/fleur.jpg",
+    "name": "Benjamin Lee",
+    "speciality": "Employment Lawyer",
+    "experience": "13 Years",
+    "licenseNumber": "LIC-96325",
+    "consultationFee": 3000,
+    "availability": ["Monday", "Saturday", "Sunday"],
+     "available": "Available"
+  },
+  {
+    "id": 10,
+    "image": "https://i.ibb.co.com/Rk41FDZV/james.jpg",
+    "name": "Charlotte White",
+    "speciality": "Business Lawyer",
+    "experience": "6 Years",
+    "licenseNumber": "LIC-17436",
+    "consultationFee": 1400,
+    "availability": ["Tuesday", "Wednesday", "Friday"],
+     "available": "Not Available"
+  },
+  {
+    "id": 11,
+    "image": "https://i.ibb.co.com/zVRdjWRK/eades.jpg",
+    "name": "Henry Harris",
+    "speciality": "Environmental Lawyer",
+    "experience": "16 Years",
+    "licenseNumber": "LIC-28547",
+    "consultationFee": 1900,
+    "availability": ["Thursday", "Friday", "Saturday"],
+     "available": " Not Available"
+  },
+  {
+    "id": 12,
+    "image": "https://i.ibb.co.com/SLdf4KP/bradford.jpg",
+    "name": "Amelia Clark",
+    "speciality": "Personal Injury Lawyer",
+    "experience": "5 Years",
+    "licenseNumber": "LIC-39658",
+    "consultationFee": 1600,
+    "availability": ["Monday", "Wednesday", "Sunday"],
+     "available": "Available"
+  }
+]
