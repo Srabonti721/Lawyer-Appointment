@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData, } from 'react-router';
 import BookedLaw from './BookedLaw';
 import { GetStoredLawyer } from '../../utilit/AddToStoredDB';
-import { Bar, BarChart, XAxis, YAxis } from 'recharts';
+import  TriangleBar  from './Chart';
 const Booking = () => {
     const [booking, setBooking] = useState([])
     const data = useLoaderData();
@@ -16,11 +16,7 @@ const Booking = () => {
     return (
         <div>
             <div className='w-2/3 mx-auto'>
-                <BarChart width={600} height={300} data={booking}>
-                    <XAxis dataKey={"name"}></XAxis>
-                    <YAxis></YAxis>
-                    <Bar fill="green" dataKey="consultationFee"></Bar>
-                </BarChart>
+        <TriangleBar booking={booking}></TriangleBar>
             </div>
             <div className='text-center my-4'>
                 <h1 className='font-bold text-2xl'>My Today Appointments</h1>
