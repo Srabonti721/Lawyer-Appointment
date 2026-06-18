@@ -4,7 +4,6 @@ import review from '../assets/success-review.png';
 import initiated from '../assets/success-patients.png';
 import stuff from '../assets/success-staffs.png';
 import CountUp from 'react-countup';
-
 const BestLawyer = () => {
     return (
         <div className='text-center my-4'>
