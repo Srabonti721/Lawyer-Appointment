@@ -1,8 +1,27 @@
 import React, { } from 'react';
-import { useParams } from 'react-router';
-
+// import { RemoveToStored } from '../../utilit/AddToStoredDB';
 const BookedLaw = ({ data }) => {
-    const {name,speciality, consultationFee } = data
+    console.log(data.id);
+    // const remainingData = data.filter(item=>item.id !== id)
+//     const handleCancel = (id) =>{
+//         console.log(id);
+        
+//          const data = JSON.parse(localStorage.getItem("booking")) || [];
+//            const remainingDoctors = data.filter(
+//     doctor => doctor.id !== id);
+//     localStorage.setItem(
+//     "booking",
+//     JSON.stringify(remainingDoctors)
+//   );
+        // localStorage.removeItem(id)
+        // console.log("click", id)// 
+          const {name,speciality, consultationFee } = data;
+//     const handleCancel=(id)=>{
+// RemoveToStored(id)
+// console.log("do somthing");
+
+    // }
+  
     return (
         <div>
             <div className='border border-gray-300 rounded-lg my-4 p-4'>
