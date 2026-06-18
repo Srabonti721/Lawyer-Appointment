@@ -1,5 +1,6 @@
 import React from 'react';
-import { useLoaderData, useParams } from 'react-router';
+import { Link, useLoaderData, useParams } from 'react-router';
+import { AddToStoredLawyer } from '../../utilit/AddToStoredDB';
 
 const LawyerDetails = () => {
     const { id } = useParams();
@@ -7,7 +8,11 @@ const LawyerDetails = () => {
     const data = useLoaderData();
     const singleData = data.find(lawData => lawData.id === ConvertedId);
     console.log(singleData);
-    const { name, image, speciality, experience, licenseNumber, consultationFee, availability } = singleData
+    const { name, image, speciality, experience, licenseNumber, consultationFee, availability } = singleData;
+
+    const handleAppointment = (id) =>{
+        AddToStoredLawyer(id)
+    } 
     return (
         <div className='my-4'>
             <div className='text-center bg-gray-100 border border-gray-300 rounded-xl p-8 '>
@@ -39,7 +44,10 @@ const LawyerDetails = () => {
                         <h3>Availability </h3>
                         <p className=' text-[#09982F] border mx-2 bg-green-100 rounded-full p-1 text-sm'>Lawyer Available Today</p>
                     </div>
-                    <button className='mt-4 btn btn-block text-white bg-[#0EA106] rounded-full'>Book Appointment Now</button>
+                    <Link to={`/booking/${id}`}>
+                      <button onClick={()=>handleAppointment(id)} className='mt-4 btn btn-block text-white bg-[#0EA106] rounded-full'>Book Appointment Now</button>
+                    </Link>
+                  
                 </div>
             </div>
     );
