@@ -24,22 +24,22 @@ useCountUp({ref:counted, end:170, duration:5, enableScrollSpy:500});
                 <div className='border p-8 bg-gray-200 rounded-xl border-gray-300'>
 
                     <img className='w-[40px]' src={lawyer} alt="" />
-                    <h1 className='font-bold'><span ref={countup}></span>+</h1>
+                    <h1 className='font-bold text-2xl'><span ref={countup}></span>+</h1>
                     <p className='text-gray-400'>Total Lawyer</p>
                 </div>
                 <div className=' border p-8 bg-gray-200 rounded-xl border-gray-300'>
                     <img className='w-[40px]' src={review} alt="" />
-                    <h1 className='font-bold'><span ref={count}></span>+</h1>
+                    <h1 className='font-bold text-2xl'><span ref={count}></span>+</h1>
                     <p className='text-gray-400'>Total Reviews</p>
                 </div>
                 <div className='border p-8 bg-gray-200 rounded-xl border-gray-300'>
                     <img className='w-[40px]' src={initiated} alt="" />
-                    <h1 className='font-bold'><span ref={counting}></span>+</h1>
+                    <h1 className='font-bold text-2xl'><span ref={counting}></span>+</h1>
                     <p className='text-gray-400'>Cases Initiated</p>
                 </div>
                 <div className='border p-8 bg-gray-200 rounded-xl border-gray-300'>
                     <img className='w-[40px]' src={stuff} alt="" />
-                    <h1 className='font-bold'><span ref={counted}></span>+</h1>
+                    <h1 className='font-bold text-2xl'><span ref={counted}></span>+</h1>
                     <p className='text-gray-400'>Total Stuffs</p>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLoaderData, useParams } from 'react-router';
 import { AddToStoredLawyer } from '../../utilit/AddToStoredDB';
-
+  import { toast } from 'react-toastify';
 const LawyerDetails = () => {
     const { id } = useParams();
     const ConvertedId = parseInt(id);
@@ -10,8 +10,9 @@ const LawyerDetails = () => {
     console.log(singleData);
     const { name, image, speciality, experience, licenseNumber, consultationFee, availability } = singleData;
 
-    const handleAppointment = (id) =>{
-        AddToStoredLawyer(id)
+    const handleAppointment = (id, name) =>{
+        AddToStoredLawyer(id, name)
+
     } 
     return (
         <div className='my-4'>
@@ -45,7 +46,7 @@ const LawyerDetails = () => {
                         <p className=' text-[#09982F] border mx-2 bg-green-100 rounded-full p-1 text-sm'>Lawyer Available Today</p>
                     </div>
                     <Link to={`/booking/${id}`}>
-                      <button onClick={()=>handleAppointment(id)} className='mt-4 btn btn-block text-white bg-[#0EA106] rounded-full'>Book Appointment Now</button>
+                      <button onClick={()=>handleAppointment(id, name)} className='mt-4 btn btn-block text-white bg-[#0EA106] rounded-full'>Book Appointment Now</button>
                     </Link>
                   
                 </div>

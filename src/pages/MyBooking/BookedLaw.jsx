@@ -1,8 +1,5 @@
-import React, { } from 'react';
-import { RemoveToStored } from '../../utilit/AddToStoredDB';
-const BookedLaw = ({ data }) => {
-    console.log(data.id);
-
+import React, {} from 'react';
+const BookedLaw = ({ data, handleCancel }) => {
     const { name, speciality, consultationFee } = data;
     return (
         <div>
@@ -12,7 +9,7 @@ const BookedLaw = ({ data }) => {
                     <h3>{speciality}</h3>
                     <p>AppointmentFee : {consultationFee}</p>
                 </div>
-                <button onClick={() => RemoveToStored(data.id)} className='hover:text-white hover:bg-red-400 mt-4 btn btn-block text-[#FF0000] rounded-full border border-[#FF0000]'>Cancel Appointment</button>
+                <button onClick={() =>handleCancel(data.id)} className='hover:text-white hover:bg-red-400 mt-4 btn btn-block text-[#FF0000] rounded-full border border-[#FF0000]'>Cancel Appointment</button>
             </div>
         </div>
     );
