@@ -97,7 +97,7 @@ const CustomColorLabel = (props) => {
     return <Label {...props} fill={fill} />;
 };
 
-export default function TriangleChart({booking}) {
+export default function TriangleChart({ booking }) {
     return (
         <BarChart
             style={{

@@ -2,14 +2,6 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const Lawyer = ({ lawyer }) => {
-    // console.log(lawyer);
-// if (!lawyer) {
-//   return (
-//     <div>
-//       <h2>No Lawyer Found!</h2>
-//     </div>
-//   );
-// }
     const { name, image, speciality, experience, licenseNumber, available } = lawyer;
     return (
 
@@ -24,9 +16,9 @@ const Lawyer = ({ lawyer }) => {
                 <h2 className='text-gray-400'>{speciality}</h2>
                 <p className='text-gray-400' >License No: {licenseNumber}</p>
                 <Link to={`/lawyers/${lawyer.id}`}>
-                  <button className='btn btn-block text-sm text-blue-400 rounded-full hover:text-white hover:bg-blue-600 '>View Details</button>
+                    <button className='btn btn-block text-sm text-blue-400 rounded-full hover:text-white hover:bg-blue-600 '>View Details</button>
                 </Link>
-              
+
             </div>
         </div>
 

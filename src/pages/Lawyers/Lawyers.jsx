@@ -1,14 +1,11 @@
-import React, {useState } from 'react';
+import React, { useState } from 'react';
 import Lawyer from './Lawyer';
-
-
 const Lawyers = ({ data }) => {
-
   const [cards, setCards] = useState(6);
-  const lawyerData = data.slice(0,cards)
-      const handleShowAllLawyers = () =>{
-      setCards(12);
-    }
+  const lawyerData = data.slice(0, cards)
+  const handleShowAllLawyers = () => {
+    setCards(12);
+  }
   return (
     <div>
       <div className='text-center my-4'>

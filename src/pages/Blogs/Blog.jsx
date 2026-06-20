@@ -1,8 +1,6 @@
 import React from 'react';
 
 const Blog = ({ blog }) => {
-    console.log(blog);
-
     return (
         <div>
             <div className="my-4 p-4 bg-gray-100 collapse collapse-arrow border border-base-300 ">

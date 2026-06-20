@@ -5,11 +5,11 @@ import { useLoaderData } from 'react-router';
 import BestLawyer from './BestLawyer';
 import { TitleContext } from '../context/TitleContext';
 const Home = () => {
-        const data = useLoaderData();
-        const {setTitle} = useContext(TitleContext);
-          useEffect(() => {
-    setTitle("Law.BD || Home");
-  }, []);
+    const data = useLoaderData();
+    const { setTitle } = useContext(TitleContext);
+    useEffect(() => {
+        setTitle("Law.BD || Home");
+    }, [setTitle]);
     return (
         <div>
             <Banner></Banner>

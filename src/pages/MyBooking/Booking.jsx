@@ -6,11 +6,11 @@ import TriangleBar from './Chart';
 import { toast } from 'react-toastify';
 import { TitleContext } from '../../context/TitleContext';
 const Booking = () => {
-      const { setTitle } = useContext(TitleContext);
+    const { setTitle } = useContext(TitleContext);
     const [booking, setBooking] = useState([]);
     const data = useLoaderData();
     const navigate = useNavigate();
-        if (booking.length === 0) {
+    if (booking.length === 0) {
         navigate('/booking')
     }
     useEffect(() => {

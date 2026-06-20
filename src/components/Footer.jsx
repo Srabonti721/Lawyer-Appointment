@@ -12,8 +12,7 @@ const Footer = () => {
         <NavLink to='*' className={"mr-4"}>Contact us</NavLink>
     </>
     return (
-        <footer className="footer footer-horizontal bg-black
-text-white footer-center  p-10">
+        <footer className="footer footer-horizontal bg-black text-white footer-center  p-10">
             <aside>
                 <div className='flex'>
                     <img src={footerLogo} alt="lawyer" />
@@ -27,7 +26,7 @@ text-white footer-center  p-10">
             <nav>
                 <div className="grid grid-flow-col gap-4 text-2xl">
                     <a href="https://github.com/Srabonti721" target='_blank'><FaGithub /></a>
-                    <a href="https://www.youtube.com/feed/you"  target='_blank'  className='bg-rose-500 rounded-sm '><FaSquareYoutube /></a>
+                    <a href="https://www.youtube.com/feed/you" target='_blank' className='bg-rose-500 rounded-sm '><FaSquareYoutube /></a>
                     <a href="" className='bg-blue-500 rounded-sm '><FaFacebookF /></a>
                 </div>
             </nav>

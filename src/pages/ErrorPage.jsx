@@ -4,8 +4,8 @@ import { Link } from 'react-router';
 import { TitleContext } from '../context/TitleContext';
 
 const ErrorPage = () => {
-    const {setTitle} = useContext(TitleContext);
-    useEffect(()=>{
+    const { setTitle } = useContext(TitleContext);
+    useEffect(() => {
         setTitle('Law.BD || Error page')
     }, [setTitle])
     return (

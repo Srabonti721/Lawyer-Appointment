@@ -4,13 +4,12 @@ import Blog from './Blog';
 import { TitleContext } from '../../context/TitleContext';
 
 const Blogs = () => {
-    const {setTitle} = useContext(TitleContext);
-
+    const { setTitle } = useContext(TitleContext);
     const blogsData = useLoaderData();
- 
-   useEffect(() => {
-  setTitle("Law.BD || blogs");
-}, [setTitle]);
+
+    useEffect(() => {
+        setTitle("Law.BD || blogs");
+    }, [setTitle]);
     return (
         <div className=' my-8'>
             <div className='text-center '>

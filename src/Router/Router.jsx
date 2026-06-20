@@ -32,11 +32,6 @@ export const router = createBrowserRouter([
                 },
                 Component: LawyerDetails
             },
-            // {
-            //     path: "/lawyers/:id",
-            //     loader: () => fetch('./lawyerData.json'),
-            //     Component: LawyerDetails
-            // },
             {
                 path: "/booking",
                 Component: Bookings

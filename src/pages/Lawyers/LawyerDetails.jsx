@@ -1,26 +1,23 @@
 import React, { } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router';
 import { AddToStoredLawyer } from '../../utilit/AddToStoredDB';
+import DynamicRoute from '../DynamicRoute';
 const LawyerDetails = () => {
-const { id } = useParams();
-const ConvertedId = parseInt(id);
-const data = useLoaderData();
-const lawyer = data.find(
-  lawData => lawData.id === ConvertedId
-);
+    const { id } = useParams();
+    const data = useLoaderData();
+    console.log("id =", id);
+    console.log("data =", data);
+    const lawyer = data.find(
+        lawData => lawData.id.toString() === id
+    );
 
-if (!lawyer) {
-  return (
-    <div className="text-center mt-20">
-      <h1 className="text-3xl font-bold text-red-500">
-        No Lawyer Found!
-      </h1>
-      <p className="mt-4 text-gray-500">
-        Invalid Lawyer ID
-      </p>
-    </div>
-  );
-}
+    if (!lawyer) {
+        return (
+            <div>
+                <DynamicRoute id={id}></DynamicRoute>
+            </div>
+        );
+    }
     const handleAppointment = (id, name) => {
         AddToStoredLawyer(id, name);
     }
