@@ -6,10 +6,10 @@ import { FaSquareYoutube } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
 const Footer = () => {
     const links = <>
-        <NavLink to='/'><a className='mr-4'>Home</a></NavLink>
-        <NavLink to='/booking'><a className='mr-4'>My-Bookings</a></NavLink>
-        <NavLink to='/blog'><a className='mr-4'>Blogs</a></NavLink>
-        <NavLink to='*'><a className='mr-4'>Contact us</a></NavLink>
+        <NavLink to='/' className={"mr-4"}>Home</NavLink>
+        <NavLink to='/booking' className={"mr-4"}>My-Bookings</NavLink>
+        <NavLink to='/blog' className={"mr-4"}>Blogs</NavLink>
+        <NavLink to='*' className={"mr-4"}>Contact us</NavLink>
     </>
     return (
         <footer className="footer footer-horizontal bg-black

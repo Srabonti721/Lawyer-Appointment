@@ -4,10 +4,10 @@ import { NavLink } from 'react-router';
 import './Nav.css'
 const Navbar = () => {
   const links = <>
-    <NavLink to='/'><li className='mr-4'>Home</li></NavLink>
-    <NavLink to='/booking'><li className='mr-4'>My-Bookings</li></NavLink>
-    <NavLink to='/blog'><li className='mr-4'>Blogs</li></NavLink>
-    <NavLink to='*'><li className='mr-4'>Contact us</li></NavLink>
+        <NavLink to='/' className={"mr-4"}>Home</NavLink>
+        <NavLink to='/booking' className={"mr-4"}>My-Bookings</NavLink>
+        <NavLink to='/blog' className={"mr-4"}>Blogs</NavLink>
+        <NavLink to='*' className={"mr-4"}>Contact us</NavLink>
   </>
   return (
     <div className="navbar bg-base-100 shadow-sm">

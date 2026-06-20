@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import Banner from './Banner';
 import Lawyers from '../pages/Lawyers/Lawyers';
 import { useLoaderData } from 'react-router';
 import BestLawyer from './BestLawyer';
+import { TitleContext } from '../context/TitleContext';
 const Home = () => {
         const data = useLoaderData();
-    // console.log(data);
+        const {setTitle} = useContext(TitleContext);
+          useEffect(() => {
+    setTitle("Law.BD || Home");
+  }, []);
     return (
         <div>
             <Banner></Banner>

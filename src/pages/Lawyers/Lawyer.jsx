@@ -3,6 +3,13 @@ import { Link } from 'react-router';
 
 const Lawyer = ({ lawyer }) => {
     // console.log(lawyer);
+// if (!lawyer) {
+//   return (
+//     <div>
+//       <h2>No Lawyer Found!</h2>
+//     </div>
+//   );
+// }
     const { name, image, speciality, experience, licenseNumber, available } = lawyer;
     return (
 

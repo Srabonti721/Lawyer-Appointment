@@ -1,19 +1,30 @@
-import React from 'react';
+import React, { } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router';
 import { AddToStoredLawyer } from '../../utilit/AddToStoredDB';
-  import { toast } from 'react-toastify';
 const LawyerDetails = () => {
-    const { id } = useParams();
-    const ConvertedId = parseInt(id);
-    const data = useLoaderData();
-    const singleData = data.find(lawData => lawData.id === ConvertedId);
-    console.log(singleData);
-    const { name, image, speciality, experience, licenseNumber, consultationFee, availability } = singleData;
+const { id } = useParams();
+const ConvertedId = parseInt(id);
+const data = useLoaderData();
+const lawyer = data.find(
+  lawData => lawData.id === ConvertedId
+);
 
-    const handleAppointment = (id, name) =>{
-        AddToStoredLawyer(id, name)
-
-    } 
+if (!lawyer) {
+  return (
+    <div className="text-center mt-20">
+      <h1 className="text-3xl font-bold text-red-500">
+        No Lawyer Found!
+      </h1>
+      <p className="mt-4 text-gray-500">
+        Invalid Lawyer ID
+      </p>
+    </div>
+  );
+}
+    const handleAppointment = (id, name) => {
+        AddToStoredLawyer(id, name);
+    }
+    const { name, image, speciality, experience, licenseNumber, consultationFee, availability } = lawyer;
     return (
         <div className='my-4'>
             <div className='text-center bg-gray-100 border border-gray-300 rounded-xl p-8 '>
@@ -32,25 +43,25 @@ const LawyerDetails = () => {
                     <div>
                         Availability :
                         {
-                            availability.map((day)=><span className=' text-[#FFA000] border mx-2 bg-orange-100 rounded-full p-1 text-sm'> {day}</span>)
+                            availability.map((day, index) => <span key={index} className=' text-[#FFA000] border mx-2 bg-orange-100 rounded-full p-1 text-sm'> {day}</span>)
                         }
                     </div>
                     <h2>Consultation Fee : <span className='text-green-600 font-semibold'>Taka:{consultationFee}</span></h2>
-                     </div>
-                </div>
-                <div className='text-center bg-gray-100 border border-gray-300 rounded-xl p-8 '>
-                    <h1 className='text-2xl font-semibold'>Book an Appointment</h1>
-                    <div className='border-b-2 border-gray-300 border-dashed my-2'></div>
-                    <div className='flex justify-between'>
-                        <h3>Availability </h3>
-                        <p className=' text-[#09982F] border mx-2 bg-green-100 rounded-full p-1 text-sm'>Lawyer Available Today</p>
-                    </div>
-                    <Link to={`/booking/${id}`}>
-                      <button onClick={()=>handleAppointment(id, name)} className='mt-4 btn btn-block text-white bg-[#0EA106] rounded-full'>Book Appointment Now</button>
-                    </Link>
-                  
                 </div>
             </div>
+            <div className='text-center bg-gray-100 border border-gray-300 rounded-xl p-8 '>
+                <h1 className='text-2xl font-semibold'>Book an Appointment</h1>
+                <div className='border-b-2 border-gray-300 border-dashed my-2'></div>
+                <div className='flex justify-between'>
+                    <h3>Availability </h3>
+                    <p className=' text-[#09982F] border mx-2 bg-green-100 rounded-full p-1 text-sm'>Lawyer Available Today</p>
+                </div>
+                <Link to={`/booking/${id}`}>
+                    <button onClick={() => handleAppointment(id, name)} className='mt-4 btn btn-block text-white bg-[#0EA106] rounded-full'>Book Appointment Now</button>
+                </Link>
+
+            </div>
+        </div>
     );
 };
 

@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useLoaderData } from 'react-router';
 import Blog from './Blog';
+import { TitleContext } from '../../context/TitleContext';
 
 const Blogs = () => {
-    const blogsData = useLoaderData();
-    console.log(blogsData);
+    const {setTitle} = useContext(TitleContext);
 
+    const blogsData = useLoaderData();
+ 
+   useEffect(() => {
+  setTitle("Law.BD || blogs");
+}, [setTitle]);
     return (
         <div className=' my-8'>
             <div className='text-center '>

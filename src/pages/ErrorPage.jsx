@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import { Link } from 'react-router';
+import { TitleContext } from '../context/TitleContext';
 
 const ErrorPage = () => {
+    const {setTitle} = useContext(TitleContext);
+    useEffect(()=>{
+        setTitle('Law.BD || Error page')
+    }, [setTitle])
     return (
         <div>
             <Navbar></Navbar>
